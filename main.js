@@ -12,7 +12,7 @@ function createWindow () {
   // Create the browser window.
   mainWindow = new BrowserWindow({
     width: 1000, 
-    height: 700, 
+    height: 800, 
     frame: false,
     icon: __dirname + '/images/icon.png',
   })
@@ -24,7 +24,7 @@ function createWindow () {
   mainWindow.loadURL(`file://${__dirname}/index.html`)
 
   // Open the DevTools.
-  //mainWindow.webContents.openDevTools()
+  mainWindow.webContents.openDevTools()
 
   // Emitted when the window is closed.
   mainWindow.on('closed', function () {

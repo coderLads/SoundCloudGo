@@ -1,15 +1,8 @@
-@CHARSET "ISO-8859-1";
-@import url(https://fonts.googleapis.com/css?family=Raleway:200,100);
+@import 'https://fonts.googleapis.com/css?family=Roboto';
 * {
-    font-family: 'raleway', sans-serif;
-    font-weight: 200;
-}
-
-::selection {
-  background: #a7cf37; /* WebKit/Blink Browsers */
-}
-::-moz-selection {
-  background: #a7cf37; /* Gecko Browsers */
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    color: #FFFFFF;
 }
 
 html {
@@ -17,10 +10,27 @@ html {
  padding: 0px;
 }
 
+h2 {
+    text-align: center;
+}
+
+.primary1 {
+    background-color: #00BCD4;
+}
+.primary2 {
+    background-color: #0097A7;
+}
+.primary3 {
+    background-color: #00838F;
+}
+.accent1 {
+    background-color: #FF4081;
+}
+
 body {
+ overflow: auto;
  padding: 0px;
  margin: 0px;
- background-color: #2D2D30;
  position: absolute;
  top: 0px;
  left: 0px;
@@ -33,15 +43,14 @@ body {
  height: 32px; 
  padding: 0px;
  margin: 0px; 
- color: #ADADAD;
 }
 
 #title {
- position: fixed;
  top: 0px;
- left: 12px; 
+ left: 0px; 
  line-height: 32px;
- font-size: 14px;
+ font-size: 16px;
+ text-align: center;
 }
 
 #title-bar-btns {
@@ -52,7 +61,7 @@ body {
 }
 
 #title-bar-btns button:focus {
-    outline: #a7cf37;
+    outline: none;
 }
 
 #title-bar-btns button {
@@ -60,12 +69,14 @@ body {
  width: 32px;
  background-color: transparent;
  border: none;
- color: #F1F1F1;
  font-size: 16px;
+ padding: 0px;
+ margin: 0px;
+ margin-left: -4px;
 }
 
 #title-bar-btns button:hover {
- background-color: #3F3F41;
+    background-color: #FF4081;
 }
 
 #content {

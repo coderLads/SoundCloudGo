@@ -1,0 +1,82 @@
+@CHARSET "ISO-8859-1";
+@import url(https://fonts.googleapis.com/css?family=Raleway:200,100);
+* {
+    font-family: 'raleway', sans-serif;
+    font-weight: 200;
+}
+
+::selection {
+  background: #a7cf37; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: #a7cf37; /* Gecko Browsers */
+}
+
+html {
+ margin: 0px;
+ padding: 0px;
+}
+
+body {
+ padding: 0px;
+ margin: 0px;
+ background-color: #2D2D30;
+ position: absolute;
+ top: 0px;
+ left: 0px;
+ right: 0px;
+ bottom: 0px;
+}
+
+#title-bar {
+ -webkit-app-region: drag;
+ height: 32px; 
+ padding: 0px;
+ margin: 0px; 
+ color: #ADADAD;
+}
+
+#title {
+ position: fixed;
+ top: 0px;
+ left: 12px; 
+ line-height: 32px;
+ font-size: 14px;
+}
+
+#title-bar-btns {
+ -webkit-app-region: no-drag;
+ position: fixed;
+ top: 0px;
+ right: 0px;
+}
+
+#title-bar-btns button:focus {
+    outline: #a7cf37;
+}
+
+#title-bar-btns button {
+ height: 32px;
+ width: 32px;
+ background-color: transparent;
+ border: none;
+ color: #F1F1F1;
+ font-size: 16px;
+}
+
+#title-bar-btns button:hover {
+ background-color: #3F3F41;
+}
+
+#content {
+ padding: 12px; 
+ color: #CCCCCC;
+}
+
+webview{
+  position: absolute;
+  top: 32px;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 32px);
+}

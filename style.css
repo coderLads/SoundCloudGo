@@ -2,7 +2,7 @@
 * {
     font-family: 'Roboto', sans-serif;
     font-weight: normal;
-    color: #FFFFFF;
+    color: white;
 }
 
 html {
@@ -15,16 +15,10 @@ h2 {
 }
 
 .primary1 {
-    background-color: #00BCD4;
+    background-color: white;
 }
 .primary2 {
-    background-color: #0097A7;
-}
-.primary3 {
-    background-color: #00838F;
-}
-.accent1 {
-    background-color: #FF4081;
+    background-color: #333;
 }
 
 body {
@@ -42,7 +36,8 @@ body {
  -webkit-app-region: drag;
  height: 32px; 
  padding: 0px;
- margin: 0px; 
+ margin: 0px;
+ background-color: #333;
 }
 
 #title {
@@ -76,7 +71,7 @@ body {
 }
 
 #title-bar-btns button:hover {
-    background-color: #FF4081;
+    background-color: #f30;
 }
 
 #content {

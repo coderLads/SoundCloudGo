@@ -48,18 +48,18 @@ body {
  text-align: center;
 }
 
-#title-bar-btns {
+#title-bar-btns-right {
  -webkit-app-region: no-drag;
  position: fixed;
  top: 0px;
  right: 0px;
 }
 
-#title-bar-btns button:focus {
+#title-bar-btns-right button:focus {
     outline: none;
 }
 
-#title-bar-btns button {
+#title-bar-btns-right button {
  height: 32px;
  width: 32px;
  background-color: transparent;
@@ -70,7 +70,7 @@ body {
  margin-left: -4px;
 }
 
-#title-bar-btns button:hover {
+#title-bar-btns-right button:hover {
     background-color: #f30;
 }
 

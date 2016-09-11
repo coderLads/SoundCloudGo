@@ -40,7 +40,7 @@ body {
  background-color: #333;
 }
 
-#title {
+.title {
  top: 0px;
  left: 0px; 
  line-height: 32px;
@@ -48,18 +48,25 @@ body {
  text-align: center;
 }
 
-#title-bar-btns-right {
+.title-bar-btns {
  -webkit-app-region: no-drag;
  position: fixed;
  top: 0px;
+}
+
+.btns-right {
  right: 0px;
 }
 
-#title-bar-btns-right button:focus {
+.btns-left {
+ left: 0px;
+}
+
+.title-bar-btns button:focus {
     outline: none;
 }
 
-#title-bar-btns-right button {
+.title-bar-btns button {
  height: 32px;
  width: 32px;
  background-color: transparent;
@@ -70,7 +77,7 @@ body {
  margin-left: -4px;
 }
 
-#title-bar-btns-right button:hover {
+.title-bar-btns button:hover {
  background-color: #f30;
 }
 

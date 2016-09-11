@@ -74,26 +74,6 @@ body {
  background-color: #f30;
 }
 
-.icon-bar {
- -webkit-app-region: no-drag;
- position: fixed;
- border: none;
- top: 0px;
- left: 0px;
-}
-
-.icon-bar a {
- padding: 0px;
- display: block;
- transition: all 0.3s ease;
- color: #f30;
- height: 32px;
- width: 32px;
- font-size: 26px;
- margin: 0px;
- margin-left: -4px;
-}
-
 #content {
  padding: 12px; 
  color: #CCCCCC;

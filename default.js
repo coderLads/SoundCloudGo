@@ -31,7 +31,7 @@
       });
 
       document.getElementById("friend-btn").addEventListener("click", function (e) {
-        document.getElementById("main-view").loadURL("https://soundcloud.com/you/following")
+        document.getElementById("main-view").executeJavaScript("document.getElementsByClassName('userNav__button userNav__usernameButton')[0].click(); document.getElementsByClassName('profileMenu__link profileMenu__following')[0].click()")
       });
     };
 

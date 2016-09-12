@@ -23,11 +23,15 @@
       });
 
       document.getElementById("like-btn").addEventListener("click", function (e) {
-        document.getElementById("main-view").loadURL("https://soundcloud.com/you/likes")
+        document.getElementById("main-view").executeJavaScript(getElementsByClassName("profileMenu__likes")[0].click())
       });
 
       document.getElementById("playlist-btn").addEventListener("click", function (e) {
         document.getElementById("main-view").loadURL("https://soundcloud.com/you/sets")
+      });
+
+      document.getElementById("friend-btn").addEventListener("click", function (e) {
+        document.getElementById("main-view").loadURL("https://soundcloud.com/you/following")
       });
     };
 

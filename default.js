@@ -23,7 +23,7 @@
       });
 
       document.getElementById("like-btn").addEventListener("click", function (e) {
-        document.getElementById("main-view").executeJavaScript(getElementsByClassName("profileMenu__likes")[0].click())
+        document.getElementById("main-view").executeJavaScript("document.getElementsByClassName('userNav__button userNav__usernameButton')[0].click(); document.getElementsByClassName('profileMenu__link profileMenu__likes')[0].click()")
       });
 
       document.getElementById("playlist-btn").addEventListener("click", function (e) {

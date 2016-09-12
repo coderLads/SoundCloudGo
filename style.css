@@ -79,11 +79,11 @@ body {
 .btns-right button {
  margin-left: -4px;
 }
-
+/*
 .btns-left button {
- margin-right: -4px;
+ margin-left: 4px;
 }
-
+*/
 .title-bar-btns button:hover {
  background-color: #f30;
 }

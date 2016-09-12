@@ -21,12 +21,22 @@
         const window = remote.getCurrentWindow();
         window.close();
       });
+
+      document.getElementById("like-btn").addEventListener("click", function (e) {
+        document.getElementById("main-view").loadURL("https://soundcloud.com/you/likes")
+      });
+
+      document.getElementById("playlist-btn").addEventListener("click", function (e) {
+        document.getElementById("main-view").loadURL("https://soundcloud.com/you/sets")
+      });
     };
-    
+
     document.onreadystatechange = function () {
       if (document.readyState == "complete") {
         init();
       }
     };
-          
+    
+    
+
 })();

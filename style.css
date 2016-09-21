@@ -99,4 +99,40 @@ webview{
   left: 0;
   width: 100%;
   height: calc(100% - 32px);
+  z-index: -1;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #f30;
+    color: #333;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 10;
+    top: 150%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #f30 transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
 }

@@ -136,3 +136,11 @@ webview{
 .tooltip:hover .tooltiptext {
     visibility: visible;
 }
+.tooltip .tooltiptext {
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.tooltip:hover .tooltiptext {
+    opacity: 1;
+}

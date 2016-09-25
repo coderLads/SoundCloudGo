@@ -91,6 +91,7 @@ body {
 #content {
  padding: 12px; 
  color: #CCCCCC;
+ z-index: 1;
 }
 
 webview{
@@ -99,7 +100,6 @@ webview{
   left: 0;
   width: 100%;
   height: calc(100% - 32px);
-  z-index: -1;
 }
 
 .tooltip {

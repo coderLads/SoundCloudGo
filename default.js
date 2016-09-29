@@ -44,6 +44,9 @@
       document.getElementById("stats-btn").addEventListener("click", function (e) {
         document.getElementById("main-view").executeJavaScript("document.getElementsByClassName('userNav__button userNav__usernameButton')[0].click(); document.getElementsByClassName('profileMenu__link profileMenu__')[0].click()")
       });*/
+      electronLocalshortcut.register(win,'Ctrl+G'){
+        console.log("Ctrl+G was pressed");
+      };
     };
 
     document.onreadystatechange = function () {

@@ -60,8 +60,9 @@ app.on('activate', function () {
 // code. You can also put them in separate files and require them here.=
 app.on('ready', () => {
   // Register a 'CommandOrControl+X' shortcut listener.
-  const ret = globalShortcut.register('CommandOrControl+X', () => {
-    console.log('CommandOrControl+X is pressed')
+  const ret = globalShortcut.register('CommandOrControl+SPACE', () => {
+    console.log('CommandOrControl+space is pressed')
+    document.getElementById("main-view").executeJavaScript("document.getElementsByClassName('header__mainMenu-loggedInHome header__mainMenu-stream')[0].click()")
   })
 
   if (!ret) {

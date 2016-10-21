@@ -58,25 +58,3 @@ app.on('activate', function () {
 
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.=
-app.on('ready', () => {
-  // Register a 'CommandOrControl+X' shortcut listener.
-  const ret = globalShortcut.register('CommandOrControl+SPACE', () => {
-    console.log('CommandOrControl+space is pressed')
-    document.getElementById("main-view").executeJavaScript("document.getElementsByClassName('header__mainMenu-loggedInHome header__mainMenu-stream')[0].click()")
-  })
-
-  if (!ret) {
-    console.log('registration failed')
-  }
-
-  // Check whether a shortcut is registered.
-  console.log(globalShortcut.isRegistered('CommandOrControl+X'))
-})
-
-app.on('will-quit', () => {
-  // Unregister a shortcut.
-  globalShortcut.unregister('CommandOrControl+X')
-
-  // Unregister all shortcuts.
-  globalShortcut.unregisterAll()
-})

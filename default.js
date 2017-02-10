@@ -43,10 +43,10 @@
       document.getElementById("playlist-btn").addEventListener("click", function (e) {
         document.getElementById("main-view").executeJavaScript("document.getElementsByClassName('userNav__button userNav__usernameButton')[0].click(); document.getElementsByClassName('profileMenu__link profileMenu__sets')[0].click()")
       });
-      /*
-      document.getElementById("stats-btn").addEventListener("click", function (e) {
-        document.getElementById("main-view").executeJavaScript("document.getElementsByClassName('userNav__button userNav__usernameButton')[0].click(); document.getElementsByClassName('profileMenu__link profileMenu__')[0].click()")
-      });*/
+      document.getElementById("main-view").executeJavaScript("document.getElementById('app').getElementsByTagName('header')[0].style.display = 'none'");
+      document.getElementById("main-view").executeJavaScript("document.getElementById('app').style.marginTop = '-70px'");
+      /* This needs to be triggered every time someones profile is loaded.
+      document.getElementById("main-view").executeJavaScript("document.getElementsByClassName('dropbar__content')[0].style.marginTop = '-70px'");*/
     };
 
     document.onreadystatechange = function () {

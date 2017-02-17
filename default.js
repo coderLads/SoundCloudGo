@@ -45,16 +45,17 @@
         });
         document.getElementById("main-view").executeJavaScript("document.getElementById('app').getElementsByTagName('header')[0].style.display = 'none'");
         document.getElementById("main-view").executeJavaScript("document.getElementById('app').style.marginTop = '-70px'");
-        //auto shuffle and play
-        document.getElementById("main-view").executeJavaScript("document.getElementsByClassName('sc-toggle-handle')[0].click()");
-        document.getElementById("main-view").executeJavaScript("document.getElementsByClassName('sc-button-play playButton sc-button m-stretch')[0].click()");
         /* This needs to be triggered every time someones profile is loaded.
         document.getElementById("main-view").executeJavaScript("document.getElementsByClassName('dropbar__content')[0].style.marginTop = '-70px'");*/
-    };
+    }
 
     document.onreadystatechange = function() {
         if (document.readyState == "complete") {
             init();
+            setTimeout(function() {
+                document.getElementById("main-view").executeJavaScript("document.getElementsByClassName('sc-toggle-handle')[0].click()");
+                document.getElementById("main-view").executeJavaScript("document.getElementsByClassName('sc-button-play playButton sc-button m-stretch')[0].click()");
+            }, 3000);
         }
     };
 

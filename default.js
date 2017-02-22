@@ -47,6 +47,8 @@
         document.getElementById("main-view").executeJavaScript("document.getElementById('app').style.marginTop = '-70px'");
         /* This needs to be triggered every time someones profile is loaded.
         document.getElementById("main-view").executeJavaScript("document.getElementsByClassName('dropbar__content')[0].style.marginTop = '-70px'");*/
+        document.getElementById("main-view").executeJavaScript("document.getElementsByClassName('collectionNav g-tabs g-tabs-large')[0].style.display = 'none'");
+
     }
 
     document.onreadystatechange = function() {

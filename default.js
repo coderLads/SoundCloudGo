@@ -62,5 +62,6 @@
 
     document.getElementById("main-view").addEventListener("did-stop-loading", function () { // runs on navigation complete
         document.getElementById("main-view").executeJavaScript("document.getElementsByClassName('collectionNav g-tabs g-tabs-large')[0].style.display = 'none'");
+        document.getElementById("main-view").executeJavaScript("document.getElementsByClassName('streamExploreTabs')[0].style.display = 'none'");
     });
 })();

@@ -4,7 +4,8 @@ const {
     app,
     globalShortcut
 } = require('electron')
-    // Module to create native browser window.
+
+// Module to create native browser window.
 const BrowserWindow = electron.BrowserWindow
 
 // Keep a global reference of the window object, if you don't, the window will
@@ -13,15 +14,28 @@ let mainWindow
 
 function createWindow() {
     // Create the browser window.
+    //BrowserWindow.addDevToolsExtension('./ext/uBlock0.chromium');
+
     mainWindow = new BrowserWindow({
         width: 1097,
         height: 550,
         frame: false,
-        icon: __dirname + '/images/icon.png',
+        title: "SoundCloudGo",
+        menu: null,
+        icon: __dirname + '/images/old.png',
+        webPreferences: {
+            plugins: true,
+            webSecurity: false,
+            allowDisplayingInsecureContent: true,
+            experimentalFeatures: true
+        }
     })
 
-    // Remove menu
-    mainWindow.setMenu(null);
+    // make thumbnail
+    mainWindow.setThumbnailClip({ x: 0, y: mainWindow.getSize()[1] - 46, width: mainWindow.getSize()[0], height: 46 })
+
+    //set progress
+    //mainWindow.setProgressBar(0.5)
 
     // and load the index.html of the app.
     mainWindow.loadURL(`file://${__dirname}/index.html`)
@@ -36,6 +50,12 @@ function createWindow() {
         // when you should delete the corresponding element.
         mainWindow = null
     })
+
+    // emitted when the window is resized
+    mainWindow.on("resize", function() {
+        mainWindow.setThumbnailClip({ x: 0, y: mainWindow.getSize()[1] - 46, width: mainWindow.getSize()[0], height: 46 })
+    })
+
 }
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
@@ -60,4 +80,4 @@ app.on('activate', function() {
 })
 
 // In this file you can include the rest of your app's specific main process
-// code. You can also put them in separate files and require them here.=
+// code. You can also put them in separate files and require them here.
